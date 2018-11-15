@@ -3,7 +3,16 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<!-- 配置bean -->
-	
+	<!-- 
+		配置bean
+		class: bean 的全类名，通过反射的方式在IOC容器中创造Bean，所以要求Bean中必须有无参数的构造器
+		id:  
+	-->
+	<bean id="helloWorld" class = "jason.spring.beans.HelloWorld">
+		<property name="name" value="testValue"></property>
+	</bean>
+	<bean id="helloWorld2" class = "jason.spring.beans.HelloWorld">
+		<property name="name" value="testValue"></property>
+	</bean>
 
 </beans>
