@@ -21,6 +21,10 @@ public class Main {
 		//HelloWorld hello = ctx.getBean(HelloWorld.class);
 		
 		helloWorld.hello();
+		
+		Car car = (Car) ctx.getBean("car2");
+		
+		Person person = (Person) ctx.getBean("person");
 	}
 
 }
