@@ -12,7 +12,8 @@ public class Client {
 
 	public static void main(String[] args) {
 //		ICustomerService customerService = new CustomerServiceImpl();
-		ICustomerService customerService = BeanFactory.getCustomerService();
+//		ICustomerService customerService = BeanFactory.getCustomerService();
+		ICustomerService customerService = (ICustomerService) BeanFactory.getBean("CUSTOMERSERVICE");
 		customerService.saveCustomer();
 	}
 
