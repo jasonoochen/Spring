@@ -17,9 +17,8 @@ public class Client {
 		ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
 		//2.根据bean的id获取对象
 		ICustomerService cs = (ICustomerService) ac.getBean("customerService");
-		ICustomerDao cdao = (ICustomerDao) ac.getBean("customerDao");
-		System.out.println(cs);
-		System.out.println(cdao);
+		//ICustomerDao cdao = (ICustomerDao) ac.getBean("customerDao");
+		cs.saveCustomer();
 	}
 
 }

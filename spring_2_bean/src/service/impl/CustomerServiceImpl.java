@@ -1,6 +1,5 @@
 package service.impl;
 
-import dao.ICustomerDao;
 import service.ICustomerService;
 
 /*
@@ -13,16 +12,24 @@ public class CustomerServiceImpl implements ICustomerService {
 	
 //	private ICustomerDao customerDao = BeanFactory.getCustomerDao();
 	
-	private ICustomerDao customerDao = null;
-
-	public void setCustomerDao(ICustomerDao customerDao) {
-		this.customerDao = customerDao;
+//	private ICustomerDao customerDao = null;
+	
+	public CustomerServiceImpl() {
+		System.out.println("bean object created");
 	}
-
+	
+	public void init() {
+		System.out.println("bean object initialized");
+	}
+	
+	public void destroy() {
+		System.out.println("bean object destroied");
+	}
+	
 	@Override
 	public void saveCustomer() {
 		System.out.println("业务层调用持久层");
-		customerDao.saveCustomer();
+//		customerDao.saveCustomer();
 	}
 
 }
