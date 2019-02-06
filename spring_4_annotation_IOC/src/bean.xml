@@ -14,4 +14,5 @@
 		标签是在一个context的名称空间里，所以必须先导入context名称空间
 	 -->
 	<context:component-scan base-package="service"></context:component-scan>
+	<context:component-scan base-package="dao"></context:component-scan>
 </beans>
