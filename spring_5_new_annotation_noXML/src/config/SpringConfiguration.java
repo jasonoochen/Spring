@@ -2,6 +2,8 @@ package config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.PropertySource;
 
 /*
  * 如果不想用xml，可以把配置放在任意一个class类中
@@ -12,6 +14,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration  //把当前类看成是spring的配置类
 @ComponentScan({"config"})
+@Import({JDBCConfiguration.class}) //导入其他配置类
+@PropertySource(value="classpath:config/jdbcConfig.properties")
 public class SpringConfiguration {
 	
 //	@Bean(name="runner)  //它是吧方法的返回值存入spring容器中。
